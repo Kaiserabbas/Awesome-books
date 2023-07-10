@@ -1,7 +1,11 @@
 /* eslint-disable no-plusplus */
-// creating array to store books added by user
-const books = [];
+// Retrieve books from local storage if available
+const books = JSON.parse(localStorage.getItem("books")) || [];
 
+// Function to save books to local storage
+function saveBooks() {
+  localStorage.setItem("books", JSON.stringify(books));
+}
 // createing a function to add books by user through form inputs
 function addBooks(event) {
   // prevents default form submission
@@ -25,6 +29,9 @@ function addBooks(event) {
 
   // updating the books list
   showBooks();
+  
+  // Save the books to local storage
+  saveBooks();
 }
 
 // removing the values form the list when click remove button
@@ -33,6 +40,8 @@ function removeBook(index) {
   books.splice(index, 1);
   // Update the book list
   showBooks();
+  // Save the books to local storage
+  saveBooks();  
 }
 
 // Function to display the books in the list
@@ -70,3 +79,4 @@ function showBooks() {
 const bookForm = document.getElementById('form');
 bookForm.addEventListener('submit', addBooks);
 bookForm.addEventListener('submit', showBooks);
+showBooks();
