@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome books: plain JavaScript with objects</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="bookList"></div>
+
+    <h1>Awesome Books</h1>
+    <form id="form">
+      <label for="book"></label>
+      <input type="text" id="book" placeholder="Title" required /><br /><br />
+      <label for="author"></label>
+      <input
+        type="text"
+        id="author"
+        placeholder="Author"
+        required
+      /><br /><br />
+      <button type="submit">Add</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
 </html>
