@@ -1,10 +1,10 @@
 /* eslint-disable no-plusplus */
 // Retrieve books from local storage if available
-const books = JSON.parse(localStorage.getItem("books")) || [];
+const books = JSON.parse(localStorage.getItem('books')) || [];
 
 // Function to save books to local storage
 function saveBooks() {
-  localStorage.setItem("books", JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(books));
 }
 // createing a function to add books by user through form inputs
 function addBooks(event) {
@@ -29,7 +29,7 @@ function addBooks(event) {
 
   // updating the books list
   showBooks();
-  
+
   // Save the books to local storage
   saveBooks();
 }
@@ -41,7 +41,7 @@ function removeBook(index) {
   // Update the book list
   showBooks();
   // Save the books to local storage
-  saveBooks();  
+  saveBooks();
 }
 
 // Function to display the books in the list
