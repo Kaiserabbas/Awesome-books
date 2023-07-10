@@ -11,6 +11,14 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
+    "func-names": ["error", "never", { "generators": "always" }],
+     "prefer-arrow-callback": "off",
+     "no-use-before-define": [
+    "error",
+    {
+      "functions": false
+    }
+  ],
     "arrow-parens": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",

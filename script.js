@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 // creating array to store books added by user
 const books = [];
 
@@ -14,7 +15,7 @@ function addBooks(event) {
   const book = {
     title: bookTitleInput.value,
     author: authorInput.value,
-  };    
+  };
   // adding book to the books array
   books.push(book);
 
@@ -36,8 +37,8 @@ function removeBook(index) {
 
 // Function to display the books in the list
 function showBooks() {
-  const bookList = document.getElementById('bookList');
-  bookList.innerHTML = "";
+  const bookList = document.getElementById('added-books');
+  bookList.innerHTML = '';
   // Clear the existing list
 
   // Create a new list item for each book
@@ -50,12 +51,12 @@ function showBooks() {
     listItemAuthor.innerHTML = book.author;
 
     // Create a button to remove the book
-    const removeButton = document.createElement("button");
-    removeButton.innerHTML = "Remove";
-    removeButton.addEventListener("click", function() {
-    removeBook(i);
+    const removeButton = document.createElement('button');
+    removeButton.innerHTML = 'Remove';
+    removeButton.addEventListener('click', function () {
+      removeBook(i);
     });
-    const listItemHr  = document.createElement('hr');
+    const listItemHr = document.createElement('hr');
 
     // Append the books, author and remove button to the book list
     bookList.appendChild(listItemTitle);
@@ -66,6 +67,6 @@ function showBooks() {
 }
 
 // Add event listener to the form submission
-const bookForm = document.getElementById("form");
+const bookForm = document.getElementById('form');
 bookForm.addEventListener('submit', addBooks);
 bookForm.addEventListener('submit', showBooks);
