@@ -24,7 +24,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 My Portofolio <a name="about-project"></a>
+# 📖 Awesome Books Project <a name="about-project"></a>
 
 This project has been created for adding books by users and they can delete any book at specified index.
 Welcome to my portal for Awesome Books which stores the book data users enter and writes it in the HTML elements.
@@ -104,8 +104,6 @@ OPen index.html using live server.
 
 👤 **Qaisar Abbas**
 
-- Webpage Link (https://kaiserabbas.github.io/Capstone/)
-- My Video Presentation:(https://www.loom.com/share/ff730e65243143dbbacefbd465bc5a13?sid=31c52f21-5ed3-4be5-94d5-3aa4d3739b93)
 - GitHub: [@githubhandle](https://github.com/Kaiserabbas/)
 - Twitter: [@twitterhandle](https://twitter.com/AbbasKayser)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/qaisar-abbas-21a93840/)
@@ -136,7 +134,7 @@ If you like this project, Write to me and give me a good rating.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank and appreciate Microverse for arranging challanges for us to enhace our coding skills.
+I would like to thank and appreciate Microverse for arranging challanges for us to enhace our coding skills.add
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
