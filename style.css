@@ -6,7 +6,7 @@ h2 {
   text-align: center;
 }
 
-#added-books{
+#added-books {
   max-width: 500px;
   margin: 20px auto;
   border: 4px solid #000;
@@ -20,7 +20,7 @@ h2 {
 
 form {
   position: relative;
-  margin:0 0 0 28%;
+  margin: 0 0 0 28%;
 }
 
 form input {
@@ -54,7 +54,7 @@ form button {
   position: relative;
   right: 10px;
   border: 2px solid #000;
-  box-shadow: 3px 3px #000 ;
+  box-shadow: 3px 3px #000;
 }
 
 .bg-grey {

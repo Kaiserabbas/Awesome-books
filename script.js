@@ -1,12 +1,12 @@
 /* eslint-disable no-plusplus */
 // Retrieve books from local storage if available
-let books = JSON.parse(localStorage.getItem('books')) || [];
+const books = JSON.parse(localStorage.getItem('books')) || [];
 
 // Function to save books to local storage
 function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
-// defining a class for form inputs 
+// defining a class for form inputs
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -19,25 +19,25 @@ function addBooks(event) {
   event.preventDefault();
 
   // getting the input values against variables
-  let titleInput = document.getElementById('title');
-  let authorInput = document.getElementById('author');
-  let title = titleInput.value;
-  let author = authorInput.value;
+  const titleInput = document.getElementById('title');
+  const authorInput = document.getElementById('author');
+  const title = titleInput.value;
+  const author = authorInput.value;
 
   // creating a books object
-  let book = new Book(title, author);
+  const book = new Book(title, author);
   // {
   // };
   // adding book to the books array
   books.push(book);
-  
+
   // clearing the inputs values after user clicks add button.
   titleInput.value = '';
   authorInput.value = '';
-  
+
   // updating the books list
   showBooks();
-  
+
   // Save the books to local storage
   saveBooks();
 }
@@ -56,25 +56,25 @@ function removeBook(index) {
 
 function showBooks() {
   let bookCount = 0;
-  let bookList = document.getElementById('added-books');
+  const bookList = document.getElementById('added-books');
   // Clear the existing list
   bookList.innerHTML = '';
 
   // Create a new list item for each book
   for (let i = 0; i < books.length; i++) {
-    let book = books[i];
-    let booksDiv = document.createElement('div');
+    const book = books[i];
+    const booksDiv = document.createElement('div');
     booksDiv.setAttribute('class', 'books-div');
     bookCount++;
     if (bookCount % 2 === 0) {
-      booksDiv.style.backgroundColor = "white";
+      booksDiv.style.backgroundColor = 'white';
     }
-    let listItemTitle = document.createElement('p');
+    const listItemTitle = document.createElement('p');
     listItemTitle.innerHTML = `"${book.title}" by ${book.author}`;
-    booksDiv.appendChild(listItemTitle);    
+    booksDiv.appendChild(listItemTitle);
 
     // Create a button to remove the book
-    let removeButton = document.createElement('button');
+    const removeButton = document.createElement('button');
     removeButton.innerHTML = 'Remove';
     removeButton.addEventListener('click', function () {
       removeBook(i);
@@ -89,7 +89,7 @@ function showBooks() {
 }
 
 // Add event listener to the form submission
-let bookForm = document.getElementById('form');
+const bookForm = document.getElementById('form');
 bookForm.addEventListener('submit', addBooks);
 bookForm.addEventListener('submit', showBooks);
 showBooks();
