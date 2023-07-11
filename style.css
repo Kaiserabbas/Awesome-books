@@ -57,14 +57,6 @@ form button {
   box-shadow: 3px 3px #000;
 }
 
-.bg-grey {
-  background-color: grey;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
 hr {
   /* margin: 15px 0 0 0; */
   border: none;
