@@ -6,57 +6,65 @@ const books = JSON.parse(localStorage.getItem('books')) || [];
 function saveBooks() {
   localStorage.setItem('books', JSON.stringify(books));
 }
-// defining a class for form inputs
+
+// Defining a class for Book
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
+
+  static addBook(title, author) {
+    const book = new Book(title, author);
+    books.push(book);
+
+    // Save the books to local storage
+    saveBooks();
+  }
+
+  static removeBook(index) {
+    books.splice(index, 1);
+
+    // Save the books to local storage
+    saveBooks();
+  }
 }
-// createing a function to add books by user through form inputs
+
+// Create a function to add books by user through form inputs
 function addBooks(event) {
-  // prevents default form submission
+  // Prevents default form submission
   event.preventDefault();
 
-  // getting the input values against variables
+  // Getting the input values against variables
   const titleInput = document.getElementById('title');
   const authorInput = document.getElementById('author');
   const title = titleInput.value;
   const author = authorInput.value;
 
-  // creating a books object
-  const book = new Book(title, author);
-  // {
-  // };
-  // adding book to the books array
-  books.push(book);
+  // Add book using the Book class method
+  Book.addBook(title, author);
 
-  // clearing the inputs values after user clicks add button.
+  // Clearing the input values after the user clicks the add button
   titleInput.value = '';
   authorInput.value = '';
 
-  // updating the books list
+  // Update the books list
   showBooks();
-
-  // Save the books to local storage
-  saveBooks();
 }
 
-// removing the values form the list when click remove button
+// Removing the book from the list when the remove button is clicked
 function removeBook(index) {
-  // Remove the book from the array
-  books.splice(index, 1);
+  // Remove the book using the Book class method
+  Book.removeBook(index);
+
   // Update the book list
   showBooks();
-  // Save the books to local storage
-  saveBooks();
 }
 
 // Function to display the books in the list
-
 function showBooks() {
-  let bookCount = 0;
   const bookList = document.getElementById('added-books');
+
   // Clear the existing list
   bookList.innerHTML = '';
 
@@ -65,10 +73,13 @@ function showBooks() {
     const book = books[i];
     const booksDiv = document.createElement('div');
     booksDiv.setAttribute('class', 'books-div');
-    bookCount++;
-    if (bookCount % 2 === 0) {
-      booksDiv.style.backgroundColor = 'white';
+
+    if (i % 2 === 0) {
+      booksDiv.style.backgroundColor = '#fff';
+    } else {
+      booksDiv.style.backgroundColor = '#dddcdc';
     }
+
     const listItemTitle = document.createElement('p');
     listItemTitle.innerHTML = `"${book.title}" by ${book.author}`;
     booksDiv.appendChild(listItemTitle);
@@ -80,11 +91,9 @@ function showBooks() {
       removeBook(i);
     });
     booksDiv.appendChild(removeButton);
-    // const listItemHr = document.createElement('hr');
 
-    // Append the books, author and remove button to the book list
+    // Append the books, author, and remove button to the book list
     bookList.appendChild(booksDiv);
-    // bookList.appendChild(listItemHr);
   }
 }
 
