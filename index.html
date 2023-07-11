@@ -7,22 +7,26 @@
     <title>Awesome books: plain JavaScript with objects</title>
   </head>
   <body>
-    <div id="added-books"></div>
+    <h2>All awesome books</h2>
+    <div id="added-books" class="added-books"></div>
 
-    <h1>Awesome Books</h1>
-    <form id="form">
-      <label for="book"></label>
-      <input type="text" id="book" placeholder="Title" required />
-      <br /><br />
-      <label for="author"></label>
-      <input
-        type="text"
-        id="author"
-        placeholder="Author"
-        required
-      /><br /><br />
-      <button type="submit">Add</button>
-    </form>
+    <hr />
+    <h2>Add a new book</h2>
+    <div class="form">
+      <form id="form">
+        <label for="title"></label>
+        <input type="text" id="title" placeholder="Title" required />
+        <br /><br />
+        <label for="author"></label>
+        <input
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+        /><br /><br />
+        <button type="submit">Add</button>
+      </form>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
