@@ -29,7 +29,7 @@ nav div a {
   text-decoration: none;
 }
 
-nav div a:after {
+nav div a::after {
   content: '|';
   display: inline-block;
   vertical-align: top;
@@ -38,6 +38,7 @@ nav div a:after {
 nav div a:nth-child(3)::after {
   content: none;
 }
+
 nav div a:active {
   color: #fbff00;
 }
@@ -73,9 +74,9 @@ h1 {
 /* form starts here  */
 
 .form {
-  text-align: center; 
+  text-align: center;
   margin: 150px 0 150px 0;
-} 
+}
 
 form input {
   width: 350px;
@@ -144,4 +145,3 @@ footer {
 #list2 {
   display: block;
 }
-
