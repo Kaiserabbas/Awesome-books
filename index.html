@@ -7,12 +7,26 @@
     <title>Awesome books: plain JavaScript with objects</title>
   </head>
   <body>
-    <h2>All awesome books</h2>
-    <div id="added-books" class="added-books"></div>
-
-    <hr />
-    <h2>Add a new book</h2>
-    <div class="form">
+    <!-- navigation bar starts here  -->
+    <nav>
+      <p>Awesome Books</p>
+      <div>
+        <a href="#list1" onclick="addRemove('list1')">List&nbsp;&nbsp;</a>
+        <a href="#list2" onclick="addRemove('list2')">Add new&nbsp;&nbsp;</a>
+        <a href="#list3" onclick="addRemove('list3')">Contact&nbsp;&nbsp;</a>
+      </div>
+    </nav>
+    <div id="date"></div>
+    <!-- navigation bar ends here  -->
+    <!-- books list starts here  -->
+    <div id="list1" class="list">
+      <h1>All awesome books</h1>
+      <div id="added-books" class="added-books"></div>
+    </div>
+    <!-- books list ends here  -->
+    <!-- form starts here  -->
+    <div class="form list" id="list2">
+      <h1>Add a new book</h1>
       <form id="form">
         <label for="title"></label>
         <input type="text" id="title" placeholder="Title" required />
@@ -27,6 +41,28 @@
         <button type="submit">Add</button>
       </form>
     </div>
+    <!-- form ends here  -->
+    <!-- contact starts here  -->
+    <div id="list3" class="contact list">
+      <h1>Contact information</h1>
+      <p>
+        Do you have any question s or you just want to say "Hello"? <br />
+        You can reach out to us
+      </p>
+      <ul>
+        <li>Our e-mail: kayser.abbas@gmail.com</li>
+        <li>Our Phone number: +92 314 0071447</li>
+        <li>Our Address</li>
+      </ul>
+    </div>
+    <!-- contact starts here  -->
+    <!-- footer starts here -->
+    <footer>
+      <h2>Copyright<span> &nbsp &nbsp &nbsp ... </span></h2>
+    </footer>
+    <!-- footer starts here -->
     <script src="./script.js"></script>
+    <script src="./date-time.js"></script>
+    <script src="./page-content.js"></script>
   </body>
 </html>
